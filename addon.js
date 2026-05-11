@@ -7,14 +7,22 @@ builder.defineStreamHandler(({ type, id }) => {
 
     let streams = []
 
+    // =========================
+    // MOVIES
+    // =========================
+
     if (type === "movie") {
 
         streams.push({
-            name: "VidFast",
-            title: "Watch on VidFast",
-            externalUrl: `https://vidfast.pro/movie/${id}`
+            name: "Videasy",
+            title: "Watch on Videasy",
+            externalUrl: `https://videasy.net/movie/${id}`
         })
     }
+
+    // =========================
+    // SERIES
+    // =========================
 
     if (type === "series") {
 
@@ -24,9 +32,9 @@ builder.defineStreamHandler(({ type, id }) => {
         const episode = parts[2]
 
         streams.push({
-            name: "VidFast",
-            title: `VidFast S${season}E${episode}`,
-            externalUrl: `https://vidfast.pro/tv/${imdb}/${season}/${episode}`
+            name: "Videasy",
+            title: `Videasy S${season}E${episode}`,
+            externalUrl: `https://videasy.net/tv/${imdb}/${season}/${episode}`
         })
     }
 
@@ -35,6 +43,11 @@ builder.defineStreamHandler(({ type, id }) => {
 
 const addonInterface = builder.getInterface()
 
+console.log("Starting Stremio addon...")
+
 serveHTTP(addonInterface, {
     port: Number(process.env.PORT) || 7000
 })
+
+console.log("HTTP server started")
+console.log(`Manifest URL: http://127.0.0.1:${Number(process.env.PORT) || 7000}/manifest.json`)
