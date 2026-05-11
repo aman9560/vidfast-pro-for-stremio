@@ -1,8 +1,10 @@
 module.exports = {
-    id: 'org.vidfast.pro',
+    id: 'org.videasy.pro',
     version: '1.0.0',
-    name: 'VidFast Pro',
-    description: 'VidFast streams for Stremio',
+
+    name: 'Videasy Streams',
+
+    description: 'Videasy streams for Stremio',
 
     resources: ['stream'],
 
