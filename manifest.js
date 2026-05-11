@@ -8,5 +8,7 @@ module.exports = {
 
     types: ['movie', 'series'],
 
-    idPrefixes: ['tt']
+    idPrefixes: ['tt'],
+
+    catalogs: []
 }
