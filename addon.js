@@ -129,5 +129,12 @@ builder.defineStreamHandler(async ({ type, id }) => {
 })
 
 const addonInterface = builder.getInterface()
-serveHTTP(addonInterface, { port: process.env.PORT || 7000 })
-console.log(`VidFast addon running on http://127.0.0.1:${process.env.PORT || 7000}/manifest.json`)
+
+console.log('Starting Stremio addon...')
+
+serveHTTP(addonInterface, {
+  port: Number(process.env.PORT) || 7000
+})
+
+console.log('HTTP server started')
+console.log(`Manifest URL: http://127.0.0.1:${Number(process.env.PORT) || 7000}/manifest.json`)
