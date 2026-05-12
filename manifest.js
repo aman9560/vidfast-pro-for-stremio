@@ -1,10 +1,10 @@
 module.exports = {
-    id: 'org.videasy.pro',
+    id: 'org.vidfast.pro',
     version: '1.0.0',
 
-    name: 'Videasy Streams',
+    name: 'VidFast Pro',
 
-    description: 'Videasy streams for Stremio',
+    description: 'VidFast embed streams for Stremio',
 
     resources: ['stream'],
 
@@ -12,5 +12,10 @@ module.exports = {
 
     idPrefixes: ['tt'],
 
-    catalogs: []
+    catalogs: [],
+
+    behaviorHints: {
+        configurable: false,
+        configurationRequired: false
+    }
 }
