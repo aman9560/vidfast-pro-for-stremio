@@ -1,13 +1,19 @@
 {
   "name": "vidfast-pro-for-stremio",
+
   "version": "1.0.0",
+
+  "description": "VidFast embed addon for Stremio",
+
   "main": "addon.js",
+
   "license": "MIT",
+
   "scripts": {
     "start": "node addon.js"
   },
+
   "dependencies": {
-    "node-fetch": "^2.7.0",
     "stremio-addon-sdk": "^1.6.10"
   }
 }
